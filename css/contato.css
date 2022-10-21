@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;600;800&display=swap%27');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0px;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif !important;
+}
+
+header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vh;
+    padding: 0rem 7rem;
+    font-size: 1.4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 1rem;
+    font-size: 1.3rem;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu{
+    display: flex; 
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.navbar li{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#logo{
+    display: flex;
+    color: white;
+    font-weight: 600;
+    padding-right: 4rem;
+    font-size: 1.6rem;
+}
+
+
+body {
+    background-image: url('../img/Plantação.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h2 {
+    color: #333;
+    margin-left: 8%;
+    margin-top: 2.5rem;
+}
+
+h1 {
+    color: #222;
+    margin-left: 8%;
+    margin-bottom: 3%;
+}
+
+.ponto {
+    color: #009c3b;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    justify-content: space-around;
+    width: 1200px;
+    border-radius: 30px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.a {
+    color: #002776;
+}
+
+.b {
+    color: #ffdf00;
+}
+
+.c {
+    color: #FFFFFF;
+}
+
+.brasil {
+    color: #009c3b;
+}
+
+.w-left h1{
+    font-size: 5rem;
+}
+
+.w-left h2{
+    font-size: 4rem;
+}
+
+.w-left {
+    width: 50%;
+}
+
+.wrapper-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+}
+
+.wrapper-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    display: flex;
+    gap: 1.5rem;
+}
+
+form label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+form label span {
+    font-weight: 600;
+}
+
+form label input {
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    border: 2px solid transparent
+}
+
+input:focus {
+    border: 2px solid #009c3b;
+}
+
+form label textarea {
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    height: 200px;
+    border: 2px solid transparent;
+    resize: none;
+}
+
+textarea:focus {
+    border: 2px solid #009c3b;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #009c3b;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #018232;
+}
+
+.teste {
+    text-align: center;
+    color: #fff;
+    margin: 1.5rem;
+    font-weight: 700;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact span {
+    color: #fff;
+    font-weight: 600;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+
+.conteudo svg {
+    fill: #222;
+}
+
+footer {
+    margin-top: 5rem;
+    font-size: 1rem;
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.logo{
+    display: flex;
+    color: white;
+    font-weight: 600;
+    padding-right: 4rem;
+    font-size: 1.6rem;
+}
+
+.footer-bar {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-bar ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+#item-footer {
+    padding-left: .5rem;
+}
+
+.contatos li {
+    padding: .3rem 0;
+}

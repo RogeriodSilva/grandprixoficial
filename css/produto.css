@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Poppins:wght@300;600;800&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0px;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif !important;
+}
+
+header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vh;
+    padding: 0 7rem;
+    font-size: 1.7rem;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu{
+    display: flex; 
+    justify-content: flex-end;
+    width: 60%;
+}
+
+.navbar li{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#logo{
+    display: flex;
+    color: #68a051;
+    font-weight: 600;
+    padding-right: 4rem;
+    font-size: 1.5rem;
+}
+
+#logo .tech{
+    color: #fff;
+}
+
+main h2{
+    margin: 4rem 0;
+    text-align: center;
+    font-size: 1.9em;
+}
+
+.box{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 95%;
+    height: 20rem;
+}
+
+.left-side{
+    padding: 1rem;
+    height: 90%;
+    width: 30%;
+}
+
+.img-produto{
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.middle{
+    padding: 1rem;
+    height: 90%;
+    width: 30%;
+}
+
+.middle .titulo-produto{
+    padding: 0 1.2rem;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.middle li{
+    font-size: 1rem;
+}
+
+.middle ul{
+    list-style: none;
+    padding: 1.2rem;
+}
+
+.right-side{
+    text-align: center;
+    padding: 1rem;
+    height: 90%;
+    width: 30%;
+    border-radius: 10px;
+}
+
+h3{
+    font-weight: 600;
+}
+
+.right-side h3{
+    padding: .5rem;
+    font-size: 1.5em;
+}
+
+.btn{
+    font-size: .83rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: .5rem;
+}
+
+footer {
+    margin-top: 7rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-color: #000;
+}
+
+.footer-bar {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-bar ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+#item-footer {
+    padding-left: .5rem;
+}
+
+.contatos li {
+    padding: .3rem 0;
+}
