@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/produtos.css">
+    <title>Produtos</title>
+
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <section class="navbar">
+            <section id="logo">
+                <p>Agro<span class="tech">Tech</span></p>
+            </section>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="http://119.8.81.122:8010/phpBB3/">Fórum</a></li>
+                    <li><a id="user-session" href="cadastro.html">Entrar</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <div class="secaoDescricao d-flex justify-content-center">
+        <h2>Produtos</h2>
+    </div>
+    <main>
+        <div id="back-catalog" class="d-flex justify-content-center justify-content-around container">
+            <!-- <div class="card" style="width: 18rem; height: 25rem;">
+                <img src="img/produto3.webp" class="card-img-top h-50" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center v">Sementes de Alface Americana</h5>
+                    <a href="produto.html" class="btn btn-success d-flex justify-content-center">Ver Detalhes</a>
+                </div>
+            </div> -->
+        </div>
+    </main>
+    <footer>
+        <nav class="footer-bar">
+            <section id="logo">
+                <p>Agro<span class="tech">Tech</span></p>
+            </section>
+
+            <ul class="copy">
+                <li>AgroTech © 2022 - Todos os direitos reservados.</li>
+            </ul>
+            <ul class="contatos">
+                <li>@Agrotech <i class="fa-brands fa-instagram" id="item-footer"></i></li>
+                <li>(31)99907-7340 / (31)99895-1631<i class="fa-solid fa-phone" id="item-footer"></i></li>
+                <li>agrotech@gmail.com <i class="fa-solid fa-envelope" id="item-footer"></i></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script type="text/javascript">
+
+        save_default();
+
+        localStorage.removeItem('produtoview');
+
+        var AllProdut = _Eventos.getAllInfo('produto');
+
+        function setProdutoView(id) {
+            localStorage.setItem('produtoview', id);
+            window.location.href = './produto.html';
+        }
+
+        for (let Produto of AllProdut) {
+            var ID = _Eventos.ignoreInText(Produto.id, 'produto_');
+
+            _Eventos.createElements(document.querySelector('#back-catalog'), true, {
+                div_back: {
+                    Close: false,
+                    Attribute: {
+                        class: 'card',
+                        style: {
+                            'width': '18rem',
+                            'height': '25rem',
+                        }
+                    }
+                },
+
+                img_logo: {
+                    Attribute: {
+                        src: `./img/${Produto.dados.imagem}`,
+                        class: 'card-img-top w-100 p-3',
+                        style: {
+                            'height': '225px'
+                        }
+                    }
+                },
+
+                div_body: {
+                    Attribute: {
+                        class: 'card-body align-items-center'
+                    }
+                },
+
+                h5_title: {
+                    Content: `${Produto.dados.nome}`,
+                    Attribute: {
+                        class: 'card-title w-100 text-center',
+                        style: {
+                            'height': '50px'
+                        }
+                    }
+                },
+
+                label: {
+                    Close: true,
+                    Content: `R$ ${Produto.dados.preco}`,
+                    Attribute: {
+                        class: 'w-100 fw-semibold'
+                    }
+                },
+
+                div_a: {
+                    Attribute: {
+                        style: {
+                            'height': '80px'
+                        },
+                        class: 'w-100 d-flex align-items-center justify-content-center',
+                    }
+                },
+
+                button: {
+                    Content: 'Ver Detalhes',
+                    Attribute: {
+                        onclick: `setProdutoView(${ID})`,
+                        class: 'btn w-75 btn-success d-flex justify-content-center'
+                    }
+                }
+            })
+        }
+
+        _Eventos.execSession();
+    </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+
+</html>
