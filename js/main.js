@@ -61,44 +61,30 @@ const _Eventos = {
 
     session: function (form) {
 
-        var Dados = _Eventos.getForm(document.querySelector('#entrar'));
+        var Dados = _Eventos.getForm(document.querySelector('#form-login'));
         var Users = _Eventos.getAllInfo('user');
 
-        alert(Dados);
-
-        return false;
-
         for (let User of Users) {
-            if (User.dados.email == Dados.email && User.dados.senha == Dados.senha) {
-                localStorage.setItem('usersession',User.id);
-                window.location.href = './index.html';
+            if (Dados.email == User.dados.email && Dados.senha == User.dados.senha) {
+                localStorage.setItem('usersession', User.id);
+                window.location.href = '../';
             }
         }
 
         return null;
     },
 
-    setInfo: function (type, form, ignoreNull) {
+    setInfo: function (type, form, ignore) {
 
-        var Aviso = form.querySelector('#aviso-label');
-        Aviso.innerHTML = '';
+        var AllInfo = _Eventos.getAllInfo(type);
+        var Dados = _Eventos.getForm(form, ignore);
 
-        var AllInfo = this.getAllInfo(type);
-        var Dados = _Eventos.getForm(form);
-
-        if (ignoreNull) {
-            for (let DADO in Dados) {
-                if (Dados[DADO] == '') {
-                    Aviso.innerHTML = `*Aviso o campo "${form.querySelector(`#${DADO}`).placeholder}"`
-                    return;
-                }
-            }
-        }
-
-        localStorage.setItem(`${type}_${AllInfo.length + 1}`, JSON.stringify());
+        localStorage.setItem(`${type}_${AllInfo.length + 1}`, JSON.stringify(Dados));
+        return false;
     },
 
 
+    
 
 
     //Funcões adicionais

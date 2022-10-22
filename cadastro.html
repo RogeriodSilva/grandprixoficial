@@ -18,7 +18,7 @@
             <div class="form-container">
 
                 <!-- LOGIN -->
-                <form action="#" method="post" name="entrar" class="form form-login">
+                <form action="#" method="post" name="entrar" id="form-login" class="form form-login">
                     <h2 class="form-title">Fazer Login</h2>
 
                     <p class="form-text"> Utilize sua conta</p>
@@ -28,17 +28,16 @@
                         <input class="form-input" type="password" id="senha" name="senha" required
                             placeholder="Senha" />
                     </div>
-                    <input type="submit" id="login" name="login" value="ENTRAR" class="form-button" onclick="_Eventos.session('a')"/>
+                    <input type="submit" id="login" name="login" value="ENTRAR" class="form-button" onclick="_Login()"/>
                     <p class="mobile-text">
                         Não tem conta?
                         <a href="#" id="open-register-mobile">Registre-se</a>
                     </p>
 
-                    <span id="aviso-label"></span>
                 </form>
 
                 <!-- CADASTRO -->
-                <form class="form form-register" method="post" name="cad">
+                <form action="#" class="form form-register" method="post" id="form-cadastro" name="cad">
                     <h2 class="form-title">Criar Conta</h2>
 
                     <p class="form-text">Utilize o seu email Para o Cadastro</p>
@@ -60,7 +59,8 @@
                             required />
                     </div>
 
-                    <input class="form-button" type="submit" id="cadastrar" name="cadastrar" value="Cadastrar" />
+                    <input class="form-button" type="submit" id="cadastrar" name="cadastrar" value="Cadastrar"
+                        onclick="_Cadastrar()" />
                     <p class="mobile-text">
                         Já tem conta?
                         <a href="#" id="open-login-mobile">Login</a>
@@ -82,6 +82,23 @@
             </div>
         </div>
     </main>
+
+    <button onclick="_Login()">Click</button>
 </body>
+
+<script type="text/javascript">
+
+    save_default();
+
+    function _Cadastrar() {
+        _Eventos.setInfo('user', document.querySelector('#form-cadastro'), ['cadastrar']);
+        moveOverlay();
+    }
+
+    function _Login() {
+        _Eventos.session(document.querySelector('#form-login'));
+    }
+
+</script>
 
 </html>

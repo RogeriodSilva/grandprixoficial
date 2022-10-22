@@ -31,7 +31,7 @@
                     <li><a href="contato.html">Contatos</a></li>
                     <li><a href="produtos.html">Produtos</a></li>
                     <li><a href="http://119.8.81.122:8010/phpBB3/" target="_blank">Fórum</a></li>
-                    <li><a href="cadastro.html" target="_blank">Entrar</a></li>
+                    <li><a id="user-session" href="cadastro.html">Entrar</a></li>
                 </ul>
             </nav>
         </section>
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="card" style="width: 20rem;">
-                <img src="img/maquinario.jfif" class="card-img-top h-50" alt="...">
+                <img src="img/maquinario.png" class="card-img-top h-50" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">Maquinário</h5>
                     <p class="card-text">Drop Packer, Insersor de Bags, Trator Valtra BM 110 4x4 Ano 2014, Trator Massey
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="card" style="width: 20rem;">
-                <img src="img/ferramenta.jfif" class="card-img-top h-50" alt="...">
+                <img src="img/ferramenta.png" class="card-img-top h-50" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">Ferramentas</h5>
                     <p class="card-text">Alguns tipos de Ferramentas: EPI, Solda, Abrasivos, Ferramentas de Corte,
@@ -73,21 +73,22 @@
 
         <h3>PRODUTOS E APLICAÇÕES</h3>
         <div class="aplicacao mb-5 container">
-            <img src="img/Aplicacao.jpg" class="img-aplicacao" alt="">
+            <img src="img/Aplicacao.png" class="img-aplicacao" alt="">
             <div class="texto-aplicacao">
                 <span class="texto-2 mb-3">Fornecemos aditivos e adjuvantes para diferentes tipos de formulações
                     para garantir o melhor
                     desempenho do ingrediente ativo.</span>
-                <span class="texto-2">Sabemos que o desenvolvimento de uma nova formulação é parte essencial do processo de
+                <span class="texto-2">Sabemos que o desenvolvimento de uma nova formulação é parte essencial do processo
+                    de
                     lançamento
                     de um
                     novo produto para proteção de cultivos. Estamos à disposição para ajudá-lo nos desafios desse
                     processo!</span>
-                    <a href="produtos.html" class="btn btn-success mt-4">Produtos</a>
+                <a href="produtos.html" class="btn btn-success mt-4">Produtos</a>
             </div>
         </div>
     </main>
-    
+
     <footer>
         <nav class="footer-bar">
             <section id="logo">
@@ -105,6 +106,21 @@
         </nav>
     </footer>
 </body>
+
+
+<script type="text/javascript">
+
+    var usersession = localStorage.getItem('usersession');
+
+    if(usersession != null){
+        var Dados = _Eventos.getInfo('user',usersession);
+        var Texto = document.querySelector('#user-session');
+
+        
+    }
+
+</script>
+
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
